@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5191A130671377DE8CA6FD5E /* libPods-Rotten Tomatoes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 557FBC2CC9C469ACE5AD7CAE /* libPods-Rotten Tomatoes.a */; };
+		FC822ECF1AE31203007DF928 /* MovieCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC822ECE1AE31203007DF928 /* MovieCellTableView.swift */; };
 		FCC306FE1ADF7DC900D1E070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC306FD1ADF7DC900D1E070 /* AppDelegate.swift */; };
 		FCC307031ADF7DC900D1E070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC307011ADF7DC900D1E070 /* Main.storyboard */; };
 		FCC307051ADF7DC900D1E070 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC307041ADF7DC900D1E070 /* Images.xcassets */; };
 		FCC307081ADF7DC900D1E070 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC307061ADF7DC900D1E070 /* LaunchScreen.xib */; };
 		FCC307141ADF7DC900D1E070 /* Rotten_TomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC307131ADF7DC900D1E070 /* Rotten_TomatoesTests.swift */; };
 		FCC3071E1ADF7DF500D1E070 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC3071D1ADF7DF500D1E070 /* MoviesViewController.swift */; };
-		FCC307241ADF8BBF00D1E070 /* MovieCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC307231ADF8BBF00D1E070 /* MovieCellTableView.swift */; };
 		FCC7F06C1ADF957900E9D342 /* MoviesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC7F06B1ADF957800E9D342 /* MoviesDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +32,7 @@
 		0D41172C13DCD3EA3CFFE905 /* Pods-Rotten Tomatoes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rotten Tomatoes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rotten Tomatoes/Pods-Rotten Tomatoes.release.xcconfig"; sourceTree = "<group>"; };
 		557FBC2CC9C469ACE5AD7CAE /* libPods-Rotten Tomatoes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rotten Tomatoes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89213F7D4EEDC8785C8160FC /* Pods-Rotten Tomatoes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rotten Tomatoes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rotten Tomatoes/Pods-Rotten Tomatoes.debug.xcconfig"; sourceTree = "<group>"; };
+		FC822ECE1AE31203007DF928 /* MovieCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellTableView.swift; sourceTree = "<group>"; };
 		FCC306F81ADF7DC900D1E070 /* Rotten Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rotten Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC306FC1ADF7DC900D1E070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC306FD1ADF7DC900D1E070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		FCC307121ADF7DC900D1E070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC307131ADF7DC900D1E070 /* Rotten_TomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotten_TomatoesTests.swift; sourceTree = "<group>"; };
 		FCC3071D1ADF7DF500D1E070 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesViewController.swift; path = ../MoviesViewController.swift; sourceTree = "<group>"; };
-		FCC307231ADF8BBF00D1E070 /* MovieCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellTableView.swift; sourceTree = "<group>"; };
 		FCC7F0681ADF932C00E9D342 /* Rotten Tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rotten Tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCC7F06B1ADF957800E9D342 /* MoviesDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +155,7 @@
 		FCC307221ADF8AF500D1E070 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FCC307231ADF8BBF00D1E070 /* MovieCellTableView.swift */,
+				FC822ECE1AE31203007DF928 /* MovieCellTableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			files = (
 				FCC7F06C1ADF957900E9D342 /* MoviesDetailsViewController.swift in Sources */,
 				FCC306FE1ADF7DC900D1E070 /* AppDelegate.swift in Sources */,
-				FCC307241ADF8BBF00D1E070 /* MovieCellTableView.swift in Sources */,
+				FC822ECF1AE31203007DF928 /* MovieCellTableView.swift in Sources */,
 				FCC3071E1ADF7DF500D1E070 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

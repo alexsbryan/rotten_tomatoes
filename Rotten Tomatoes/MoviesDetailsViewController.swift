@@ -22,7 +22,14 @@ class MoviesDetailsViewController: UIViewController {
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["synopsis"] as? String
         
-        let url = NSURL(string: movie.valueForKeyPath("posters.thumbnail") as String)!
+        var href = movie.valueForKeyPath("posters.thumbnail") as! String
+        
+        var range = href.rangeOfString(".*cloudfront.net/", options: .RegularExpressionSearch)
+        if let range = range {
+            href = href.stringByReplacingCharactersInRange(range, withString: "https://content6.flixster.com/")
+        }
+        
+        let url = NSURL(string: href)
         
         posterView.setImageWithURL(url)
     }
