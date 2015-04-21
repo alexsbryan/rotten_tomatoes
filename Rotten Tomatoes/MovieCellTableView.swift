@@ -17,7 +17,7 @@ class MovieCellTableView: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        UIImageView.animateWithDuration(2.0, animations: {
+        UIImageView.animateWithDuration(1.0, animations: {
             self.posterView.alpha = 1
         })
     }

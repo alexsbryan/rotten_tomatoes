@@ -30,8 +30,11 @@ class MoviesDetailsViewController: UIViewController {
         }
         
         let url = NSURL(string: href)
+        self.posterView.setImageWithURL(url)
         
-        posterView.setImageWithURL(url)
+        UIImageView.animateWithDuration(1.0, animations: {
+            self.posterView.alpha = 1
+        })
     }
 
     override func didReceiveMemoryWarning() {
