@@ -16,6 +16,10 @@ class MovieCellTableView: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        UIImageView.animateWithDuration(2.0, animations: {
+            self.posterView.alpha = 1
+        })
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

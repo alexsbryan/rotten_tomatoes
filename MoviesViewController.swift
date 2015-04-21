@@ -23,14 +23,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         self.notificationLabel.frame.origin.y = -200
         
         let url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=US")!
-        let request = NSURLRequest(URL: url)
+        
+        let request = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 5)
         SVProgressHUD.show()
+        
+        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             
             if let data = data {
                 let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
-                
-                println(json)
                 
                 if let json = json {
                     self.movies = json["movies"] as? [NSDictionary]
@@ -57,6 +58,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let movies = movies {
+            println(movies.count)
             return movies.count
         } else {
             return 0
@@ -95,7 +97,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         self.notificationLabel.frame.origin.y = -100
         self.tableView.frame.origin.y = 65
         let url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=US")!
-        let request = NSURLRequest(URL: url)
+        let request = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 5)
+        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             if let data = data {
                 let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
